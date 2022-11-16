@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>End game</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/shared.css}" />
+</head>
+
+<body>
+<div class="page">
+    <div class="form">
+        <p class="end" th:text="${result}">VALUE</p>
+
+        <p class="field"><a th:href="@{/game/restart}">Play again</a></p>
+        <p class="field"><a th:href="@{/game/exit}">Exit</a></p>
+    </div>
+</div>
+
+</body>
+
+</html>

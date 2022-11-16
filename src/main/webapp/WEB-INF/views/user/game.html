@@ -1,0 +1,40 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <TITLE>TicTacToe</TITLE>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/ticTacToe.css}" />
+</head>
+
+<body>
+
+<div class="page">
+    <div class="form">
+        <label class="field">Number of games: </label>
+        <label id="sumGame" class="field" th:text="${sumGame}">VALUE</label>
+        <br>
+        <label class="field">Number of wins: </label>
+        <label id="sumWin" class="field" th:text="${sumWin}">VALUE</label>
+    </div>
+</div>
+
+<div id="playingField">
+    <div class="table">
+        <table>
+            <div th:each="line : ${playingField.getField()}">
+                <tr>
+                    <div th:each="one : ${line}">
+                        <td>
+                            <div class="box" >
+                                <a th:href='@{/game/{line}/{column}(line=${one.getLine()},column=${one.getColumn()})}'
+                                        th:text="${one.getType()}">VALUE</a>
+                            </div>
+                        </td>
+                    </div>
+                </tr>
+            </div>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

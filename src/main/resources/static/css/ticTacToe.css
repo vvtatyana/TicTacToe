@@ -1,0 +1,86 @@
+.box {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #333;
+    margin: 5px;
+    cursor: pointer;
+
+    box-shadow: 3px 4px 1px 2px rgba(1,1,1, 0.1);
+    text-shadow: 2px 3px  1px rgba(1,1,1, 0.3);
+    user-select: none;
+}
+
+.box.a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+#playingField {
+    position: relative;
+}
+#playingField .table{
+    /*border: 1px solid red;*/
+    display: table;
+
+    margin: 0 auto;
+    position: relative;
+}
+#playingField .table .winning{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,200,0, 0.5);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#playingField table tr:first-child div {
+    margin-top: 0;
+}
+#playingField table tr:last-child div {
+    margin-bottom: 0;
+}
+#playingField table tr td:first-child div {
+    margin-left: 0;
+}
+#playingField table tr td:last-child div {
+    margin-right: 0;
+}
+
+.page {
+    width: 360px;
+    margin: auto;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+//box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form .field {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 18px;
+}
+
+.form .field a {
+    color: #666666;
+    text-decoration: none;
+}

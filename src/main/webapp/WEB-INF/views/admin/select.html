@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <TITLE>TicTacToe</TITLE>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/shared.css}" />
+</head>
+
+<body>
+
+<div class="page">
+    <div class="form" th:each="user : ${users}">
+        <p class="field" th:text="${user.getLogin() + ' - ' + user.getRole().getName()}">VALUE</p>
+        <a th:href="@{/admin/{id}/delete(id=${user.getId()})}">delete</a>
+    </div>
+</div>
+
+</body>
+</html>
